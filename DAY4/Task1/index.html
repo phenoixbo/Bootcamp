@@ -1,0 +1,92 @@
+<html>
+<head>
+    <title>TOOGLE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #f4f4f4;
+            height: 100px;
+            border-top-width: 110px;
+        }
+        .content {
+            display: none;
+            margin-top: 10px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s ease-in-out;
+            opacity: 0;
+
+        }
+        .content.show {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .hide-btn {
+            display: none;
+            margin-top: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            background-color: #d9534f;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .hide-btn:hover {
+            background-color: #c9302c;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            background-color: #5bc0de;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #31b0d5;
+        }
+    </style>
+</head>
+<body>
+    <h2>WEB DEVELOPMENT</h2>
+    <button onclick="showContent('section1', 'hide1')">Show</button>
+    <button id="hide1" class="hide-btn" onclick="hideContent('section1', 'hide1')">Hide</button>
+    <div id="section1" class="content">Web development is the process of creating websites and web applications. It involves designing, coding, and maintaining websites to ensure functionality and a great user experience.</div>
+    
+    <button onclick="showContent('section2', 'hide2')">Show</button>
+    <button id="hide2" class="hide-btn" onclick="hideContent('section2', 'hide2')">Hide</button>
+    <div id="section2" class="content">Frontend development focuses on the visual and interactive aspects of a website. Developers use HTML, CSS, and JavaScript to build responsive and engaging user interfaces. Frameworks like React, Vue, and Angular help streamline development.</div>
+    
+    <button onclick="showContent('section3', 'hide3')">Show</button>
+    <button id="hide3" class="hide-btn" onclick="hideContent('section3', 'hide3')">Hide</button>
+    <div id="section3" class="content">Backend development powers the functionality behind a website. It involves working with server-side languages like Node.js, Python, PHP, or Java and managing databases with MySQL, MongoDB, or PostgreSQL. The backend handles authentication, data storage, and business logic.</div>
+    
+    <script>
+        function showContent(contentId, hideBtnId) {
+            var content = document.getElementById(contentId);
+            var hideBtn = document.getElementById(hideBtnId);
+            content.classList.add("show");
+            hideBtn.style.display = "inline-block";
+        }
+        
+        function hideContent(contentId, hideBtnId) {
+            var content = document.getElementById(contentId);
+            var hideBtn = document.getElementById(hideBtnId);
+            content.classList.remove("show");
+            setTimeout(() => {
+                content.style.display = "none";
+                hideBtn.style.display = "none";
+            }, 500);
+        }
+    </script>
+</body>
+</html>
