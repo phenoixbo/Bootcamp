@@ -1,1 +1,1 @@
-
+From day4 I have learned about how to implement JavaScript in our page. This helps to how to make our webpage or webpage been an responsuive page and also an intractive page.And learned how to produce an alert message over an page.
