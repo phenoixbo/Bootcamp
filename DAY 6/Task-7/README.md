@@ -1,0 +1,1 @@
+In day-6 I have learned how to call API using an express.js and I have learned about an Postman platform. I have learned about how the localhost was running and the working of the operation like POST,GET,PUT,DELETE.
