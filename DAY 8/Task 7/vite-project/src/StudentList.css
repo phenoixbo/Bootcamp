@@ -1,0 +1,21 @@
+.student-list-container {
+    text-align:justify;
+    padding: 20px;
+  }
+  
+  .search-bar {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .student-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
